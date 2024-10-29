@@ -1,0 +1,12 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.logo {
+  width: 64px;
+  height: 64px;
+  background-color: aqua;
+}
+.header {
+  display: flex;
+}
