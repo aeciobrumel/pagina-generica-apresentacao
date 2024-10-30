@@ -1,12 +1,53 @@
 body {
   margin: 0px;
   padding: 0px;
+  background-color: #dddddd;
+  font-family: "Poppins", serif;
 }
 .logo {
-  width: 64px;
-  height: 64px;
-  background-color: aqua;
+  width: 84px;
+  height: 84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #2a4760;
+  color: #dddddd;
+  border-radius: 50px;
 }
 .header {
   display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  border-bottom: 2px solid #ff434d;
+  padding-bottom: 5px;
+}
+nav {
+  min-width: 550px;
+}
+.menu nav ul {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  color: #212832;
+}
+a {
+  text-decoration: none;
+  color: #212832;
+  font-weight: bold;
+  font-size: 20px;
+}
+a:hover {
+  background-color: #ff434d;
+  font-size: 22px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #dddddd;
+}
+.menu {
+}
+nav {
+  width: 80vh;
 }
