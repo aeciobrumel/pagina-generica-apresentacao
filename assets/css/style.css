@@ -1,3 +1,32 @@
+@keyframes animationleft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animationright {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    left: 0;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+:root {
+  --primary: #dddddd;
+  --secondary: #ff434d;
+  --tertiary: #2a4760;
+  --quarternary: #212832;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -10,27 +39,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-color: #2a4760;
-  color: #dddddd;
+  background-color: var(--tertiary);
+  color: var(--primary);
   border-radius: 50px;
 }
 .header {
   display: flex;
-  justify-content: space-between;
-  margin: 20px;
-  border-bottom: 2px solid #ff434d;
+  margin-top: 20px;
+  margin-left: 20px;
+  justify-content: center;
+
+  border-bottom: 2px solid var(--secondary);
   padding-bottom: 5px;
+  align-items: center;
 }
-nav {
-  min-width: 550px;
-}
-.menu nav ul {
+.menu {
   list-style: none;
   text-decoration: none;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
+  align-items: center;
   text-decoration: none;
+  align-items: end;
+
   color: #212832;
 }
 a {
@@ -38,16 +70,163 @@ a {
   color: #212832;
   font-weight: bold;
   font-size: 20px;
+  transition: 300ms;
 }
 a:hover {
-  background-color: #ff434d;
+  background-color: var(--secondary);
   font-size: 22px;
   padding: 5px;
   border-radius: 5px;
-  color: #dddddd;
-}
-.menu {
+  color: var(--primary);
 }
 nav {
   width: 80vh;
+}
+.hero {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--primary);
+  height: 650px;
+  z-index: -1;
+}
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  border: 5px dashed rgb(167, 164, 164);
+  height: 250px;
+  background-color: var(--primary);
+}
+.hero-text {
+  align-items: center;
+  display: fle;
+  flex-direction: column;
+  color: #212832;
+  max-width: 260px;
+}
+.hero-btn {
+  margin-top: 20px;
+  width: 80px;
+  height: 30px;
+  background-color: var(--secondary);
+  border: 2px solid var(--quarternary);
+  border-radius: 10px;
+  color: var(--primary);
+}
+.hero-btn:hover {
+  background-color: #8f2d32;
+  cursor: pointer;
+}
+.back-deck-element {
+  top: 560px;
+  left: 0;
+  width: 100vw;
+  height: 500px;
+  z-index: -1;
+  background-color: var(--secondary);
+  position: absolute;
+}
+.deck {
+  padding-top: 26px;
+  height: 400px;
+  min-width: 650px;
+  display: flex;
+  justify-content: space-around;
+}
+.titulo-decks {
+  color: var(--primary);
+}
+.card {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 300px;
+  background-color: #ffffff;
+  border: 0, 1px solid black;
+  transition: 300ms;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.card-img {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed var(--primary);
+}
+.card-text {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card:hover {
+  margin-top: 0px;
+  box-shadow: 2px 2px 2px rgb(138, 138, 138);
+}
+.container-deck {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 600px;
+}
+.container-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+.article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 30px;
+  font-weight: bold;
+  max-width: 600px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+article {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+  min-height: 600px;
+  flex-direction: row;
+}
+.container-content {
+  align-items: center;
+}
+.text-content {
+  max-width: 400px;
+  animation-name: animationleft;
+  animation-duration: 2s;
+}
+.img-content {
+  height: 400px;
+  width: 400px;
+
+  animation-name: animationright;
+  animation-duration: 3s;
+}
+#img1 {
+  background-color: var(--tertiary);
+}
+#img2 {
+  background-color: var(--secondary);
+}
+#txt1 {
+  max-width: 600px;
+}
+footer {
+  height: 150px;
+  background-color: var(--quarternary);
+}
+.footer {
 }
